@@ -1,4 +1,4 @@
-from Discos import DiscoSimulation
+from Discos_Adriana import DiscoSimulation
 
 import csv
 
@@ -33,7 +33,7 @@ def save_data(array, file_csv):
 
 def run_and_save_data(N, M, file_csv):
     """
-    Corre la animación y guarda los datos de x_positions de todos los discos si se deja correr por un tiempo establecido.
+    Corre la animación y guarda los datos de x_poss de todos los discos si se deja correr por un tiempo establecido.
 
     Examples:
         >>> run_and_save_data(6, 2000, "data.csv")
@@ -60,9 +60,9 @@ def run_and_save_data(N, M, file_csv):
     
     while True:
 
-        print("Transcurrieron " + str(len(disks[0].x_positions)) + " instantes de tiempo")
+        print("Transcurrieron " + str(len(disks[0].x_poss)) + " instantes de tiempo")
 
-        if len(disks[0].x_positions) > M:
+        if len(disks[0].x_poss) > M:
 
             positions = [[sim.get_positions()[j][0][i] for i in range(M)] for j in range(N)]
 
